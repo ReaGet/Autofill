@@ -1,0 +1,1 @@
+(()=>{function e(e){document.querySelector(".keyword-manual-input").click(),setTimeout((()=>{document.querySelector(".ms-TextField-field").value=e,setTimeout((()=>{document.querySelector(".keyword-manual-input-confirm-button").click()}),500)}),500)}chrome.runtime.onMessage.addListener((function(t,o,u){JSON.parse(t.keywords).map(e)}))})();
