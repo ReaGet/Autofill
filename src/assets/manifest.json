@@ -1,0 +1,18 @@
+{
+  "content_scripts": [{
+    "js": [
+      "./js/autofill.js"
+    ],
+    "css": [
+      "./css/autofill.css"
+    ],
+    "all_frames": true,
+    "run_at": "document_start",
+    "matches": [
+      "*://ads.microsoft.com/*"
+    ]
+  }],
+  "name": "Autofill",
+  "version": "0.0.1",
+  "manifest_version": 3
+}
