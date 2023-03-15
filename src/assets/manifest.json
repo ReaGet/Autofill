@@ -1,10 +1,10 @@
 {
   "content_scripts": [{
     "js": [
-      "./js/autofill.js"
+      "./js/script.js"
     ],
     "css": [
-      "./css/autofill.css"
+      "./css/styles.css"
     ],
     "all_frames": true,
     "run_at": "document_start",
@@ -12,6 +12,13 @@
       "*://ads.microsoft.com/*"
     ]
   }],
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "Latest Covid Report"
+  },
+  "permissions": [
+    "activeTab"
+  ],
   "name": "Autofill",
   "version": "0.0.1",
   "manifest_version": 3

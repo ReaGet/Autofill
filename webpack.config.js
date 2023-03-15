@@ -5,7 +5,8 @@ const MiniCssExtractPlugin =require("mini-css-extract-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    autofill: path.resolve(__dirname, "src/app.js"),
+    popup: path.resolve(__dirname, "src/js/popup.js"),
+    script: path.resolve(__dirname, "src/js/script.js"),
   },
   output: {
     filename: "js/[name].js",
@@ -26,11 +27,12 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/autofill.css",
+      filename: "css/styles.css",
     }),
     new copyWebpackPlugin({
       patterns: [
         { from: "src/assets/", to: path.resolve(__dirname, "public") },
+        { from: "src/index.html", to: path.resolve(__dirname, "public") },
       ],
     }),
   ],
